@@ -3,7 +3,7 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Archives"
-    url: /archives/
+  - title: "Blog"
+    url: /bog/
   - title: "GitHub"
-    url: https://github.com/yous/whiteglass
+    url: https://github.com/mayankdhiman/mayankdhiman.github.io
