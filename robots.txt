@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://mayankdhiman.github.io/sitemap.xml
