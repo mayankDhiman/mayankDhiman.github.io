@@ -1,1 +1,1 @@
-Sitemap: https://yous.github.io/whiteglass/sitemap.xml
+Sitemap: /sitemap.xml
