@@ -5,7 +5,7 @@
   
   <link href="/feed.xml" rel="self" type="application/atom+xml" />
   <link href="/" rel="alternate" type="text/html" hreflang="en" />
-  <updated>2019-06-19T19:47:55+00:00</updated>
+  <updated>2019-06-19T20:38:57+00:00</updated>
   <id>//</id>
 
   
@@ -28,15 +28,15 @@
   
     <entry>
       
-      <title type="html">Week 1 to 3 aerspaceresearch.net</title>
+      <title type="html">Week 1 to 3 aerospaceresearch.net</title>
       
       
-      <link href="/2019/06/18/Week_1_to_3_aerspaceresearch.net/" rel="alternate" type="text/html" title="Week 1 to 3 aerspaceresearch.net" />
+      <link href="/2019/06/18/Week_1_to_3_aerospaceresearch.net/" rel="alternate" type="text/html" title="Week 1 to 3 aerospaceresearch.net" />
       
       <published>2019-06-18T21:40:14+00:00</published>
       <updated>2019-06-18T21:40:14+00:00</updated>
-      <id>/2019/06/18/Week_1_to_3_aerspaceresearch.net</id>
-      <content type="html" xml:base="/2019/06/18/Week_1_to_3_aerspaceresearch.net/">&lt;p&gt;This blog post is intended to pen down my experience of working with aerospaceresearch.net and on VisMa – Visual Math as a part of Google Summer of Code 2019. A part of this blog post will be about how it feels to be working here &amp;amp; other parts will focus on technicalities of the project (about how VisMa has been improved over the past three weeks).&lt;/p&gt;
+      <id>/2019/06/18/Week_1_to_3_aerospaceresearch.net</id>
+      <content type="html" xml:base="/2019/06/18/Week_1_to_3_aerospaceresearch.net/">&lt;p&gt;This blog post is intended to pen down my experience of working with aerospaceresearch.net and on VisMa – Visual Math as a part of Google Summer of Code 2019. A part of this blog post will be about how it feels to be working here &amp;amp; other parts will focus on technicalities of the project (about how VisMa has been improved over the past three weeks).&lt;/p&gt;
 
 &lt;p&gt;Firstly, working with aerospaceresearch.net has been a great experience. The mentors of the project Shantanu, Manfred &amp;amp; Siddharth are very helpful. We almost regularly have chat on Zulip (&amp;amp; sometimes on WhatsApp) wherein we discuss the plans for the project and about implementation. Owing to these healthy discussions the project development is going at a fast rate (which is indeed a good thing!). The code base of VisMa is very well written and the complex task of simplifying mathematical equations has been beautifully coded. About the workload, I work regularly for 5 – 6 hours, but sometimes when a crucial bug finds its way in, the work time has to be increased. Overall it’s a Fun &amp;amp; Learn experience.&lt;/p&gt;
 
