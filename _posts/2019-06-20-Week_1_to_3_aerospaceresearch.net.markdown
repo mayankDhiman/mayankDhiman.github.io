@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Week 1 to 3 aerspaceresearch.net"
+title:  "Week 1 to 3 aerospaceresearch.net"
 date:   2019-06-19 03:10:14 +0530
 tags: nothing
 categories: jekyll update
