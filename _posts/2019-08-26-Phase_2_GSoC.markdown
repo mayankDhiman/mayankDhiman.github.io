@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "Phase II at aerospaceresearch.net"
+date:   2019-08-26 03:10:14 +0530
+tags: nothing
+categories: jekyll update
+---
+
+It’s been almost two months I started to work on VisMa as my GSoC-19 Project (although I have been working with the community since December 2018) and it has been a quiet learning experience. This post will focus on technical details of what VisMa team has improved in the project roughly during the span of Phase II of GSoC.
+
+Week 5: During this time, my goal was to complete the work regarding the Discrete Mathematics module. As I have mentioned in the previous Blog, we had added some basic Combinatorics modules (Factorial, Permutation & Combinations), this week our plan was to take this expedition forward and add some more to this Module. Also, we intended to implement the combinatorics module in CLI/GUI, which has not been done yet. Firstly I added the comments and animations in the above-mentioned modules. Adding comments and animations always seems like a cakewalk, but as per me doing this is actually hard and time-consuming (reason being, you have to keep a track of all the equations which occur during any operation). However, once done it always gives a sweet sense of completion, as it did this case. Our next target during Week 5, was to add more to the Discrete Mathematics module. We decided on adding a Statistics Module, a Probability Module and a (bitwise) boolean algebra module. The Statistics module as of now contains basic functions to calculate mean, median and mode like measures. Statistics is a topic of prime importance, thus having a statistics module is useful for the project. The other reason behind adding this module is that VisMa already has a graph plotter, this in later versions when combined with Statistics module can be used for the analysis of user-entered data. The other major part of Discrete Mathematics module was (bitwise) boolean algebra modules. These modules are designed keeping the teaching purpose of the project in mind. The comments and animations in these modules are in such a way that student will be able to observe how each bit of a number is being operated with the subsequent bit of the other number to get the final result. This part has been solely implemented keeping teaching perspective in mind. Lastly, we added a simple Probability Module to the project. As of now, we have Combinatorics, Probability, Statistics and (bitwise) boolean Algebra module added in the project.
+
+Week 6: This week our task was to improve the integration and differentiation module of the project. The earlier logic and code for these two modules was beautifully implemented. My task was to add integration and derivation function to all Function Classes of the Project. Function Classes, in very simple terms, is a name given to a super-class of tokens whose subclasses are Constant, Variable etc. I had to add differentiation and integration for all these subclasses. Many of these were implemented but some were missing. Among missing ones, were Trigonometric, Exponential and Logarithmic Classes. I wrote the respective functions for all these Function Classes, also adding comments and animations side by side. Also, I refactored the existing code in differentiation & integration modules to follow an object-oriented style. Also added some test cases for same.
+
+Week 7: The task of this week was focussed on improving the tokenizing module, adding some corner cases in Expression Simplification (involving exponents) and fixing some potential bugs. The tokenizer module treated Variable raised to some power, as a single token of Variable type (with the value of pow parameter set to power), but it didn’t recognise power operator in any case, my task was to fix it for recognising power operator. The potential bugs with Expression Simplification could only be resolved after it was done. The Expression Simplification follows a recursive logic, thus adding even a small improvement in that module sometimes become much confusing. But finally it was done in a nice manner, and VisMa is now able to deal with almost all the cases involving Expressions and Exponents. I also added test cases to reflect the new behaviour of the project.
+
+Current Goal: As of now, I am working on implementing Matrix Module in CLI/GUI, the matrix operations have been implemented and now the next goal is to enable users to enter Matrices interactively in CLI/GUI
+
+
+Lastly, the project development is going at a good rate :). Some times it becomes buggy and confusing too, but lastly, it is a learning process and each bug does teach something new. I will soon be updating all the logic and working of the project in the wiki so that future developers can be helped.
+
+**Chears to space, Open Source, Maths & Code!**
+
+<!-- BELOW IS WHAT USED TO BE HERE, REFER FOR ANY REFERENCE ON USING THIS THEME -->
+<!-- You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+Jekyll also offers powerful support for code snippets:
+
+{% highlight ruby %}
+def print_hi(name)
+  puts "Hi, #{name}"
+end
+print_hi('Tom')
+#=> prints 'Hi, Tom' to STDOUT.
+{% endhighlight %}
+
+Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk]. -->

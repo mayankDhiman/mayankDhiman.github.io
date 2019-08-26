@@ -1,0 +1,58 @@
+---
+layout: post
+title:  "Phase III at aerospaceresearch.net"
+date:   2019-08-26 03:10:14 +0530
+tags: nothing
+categories: jekyll update
+---
+
+In this blog post, I will be summarising all the work done during phase III (i.e. last phase of GSoC 2019).
+
+This phase the major target was to wrap up all the work done during Phase I and Phase II. The first target was to implement GUI & CLI in matrices. The integration of GUI & CLI in matrices was pending from a long time and this was the time to get it done. The integration, however, was a bit tricky as it was very obvious that the usual parsers and tokenizers could not be used to integrate Matrices with GUI/CLI. We had to make an entirely new module which would be able to parse matrices (i.e. accept them as some input from the user and perform operations accordingly on them). We finally were able to properly integrate this module in GUI/CLI. It was worth the time & patience as the results were good. For now, the user has to enter the matrices in some specific Python list type pattern. In later versions, we can add options for adding matrices interactively by GUI.
+
+The next part was adding test cases for Statistics modules (which were implemented during Phase II). Also, we added Equation Plotting feature in CLI during this part. It involved creating another Qt window equivalent to the plotter used in GUI version.
+
+The last target of this phase was to add code to deal with cases when the Constant was raised to some fractional or Expression power. Earlier VisMa was able to handle only those cases when power was some Integer. The solution to this problem was to consider all the exponents as some object of Expression Class. Now since Expression simplification was done earlier this could be achieved. Also, I added the cases when Expression classes are involved in the Equation inputted by the user. Finally, our last target was to add the necessary documentation so that new users can get comfortable with the codebase. Personally, when I started to contribute to the project I found a lot of help because of docstrings & comments. Earlier developers (My mentors) have maintained a very well documented codebase, so it was my responsibility to carry this tradition forward.
+
+To sum up, all the work done I am updating a list of all that we achieved during GSoC. The Changelog is as follows:
+
+1. Simplify module written in Object-Oriented Programming Design.
+
+2. __add__, __sub__ ,__mul__ & __truediv__ methods for most of the classes (like Constant, Expression, Trigonometric etc) have been added.
+
+3. Discrete Mathematics Module has been added:
+a. Combinatorics modules like Combinations, Permutations & Factorial modules (with GUI/CLI implementations)
+b. Statistics Module containing mean, median and mode
+c. Simple probability modules
+d. Bit-wise Boolean Algebra module
+
+4. Simultaneous Equation solver has been implemented
+
+5. The plotter is now able to plot in both 2D and 3D for equations having one, two or three variables. It has been implemented in the CLI version
+
+6. Equation solvers for higher degrees (Third & fourth degree) using determinant based approach have been added.
+
+7. Integrations and differentiation modules are now implemented in all Function Classes (Trigonometry, Exponential and Logarithmic)
+
+8. Integration & Differentiation modules have been rewritten to follow Object-Oriented Style.
+
+9. Product Rule for Differentiation & Integration by parts module has been added.
+
+10. Tokenize module is now improved to consider power operator (earlier it ignored power operator in many cases)
+
+11. With above improvement Expressions raised to some power are duly handled by VisMa.
+
+12. Parsing modules for printing matrices in Latex and string form have been added. With this matrix operations are now well implemented in GUI & CLI.
+
+13. Expression simplification is now completely supported by VisMa. Almost all cases of Expression classes being involved in input equation have been taken care of. Multiple brackets are now also taken care by VisMa (for this the modules using recursion have been implemented).
+
+14. The cases where Constant are raised to some fractional power or some solvable term have been covered.
+
+The points where we will be working now are:
+
+1. We can implement an Equation Scanner in the project. This way a user will be able to scan an image of the equation and it will be solved by VisMa. This was an idea during this GSoC but due to time constraints, we were not able to work in it for now.
+
+2. VisMa is not friendly with Trigonometric expressions, there is a need to deploy some code in simplification module for taking care of this thing.
+
+Overall, working in this community as a GSoC student was a great experience. It was hard but fun to stay within deadlines, fixing bugs, deploying new ideas etc. Feel free to connect with me on [Twitter](https://twitter.com/mayank1Dhiman) & [GitHub](https://github.com/mayankDhiman).
+
