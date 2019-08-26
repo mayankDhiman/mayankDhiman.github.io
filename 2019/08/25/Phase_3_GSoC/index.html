@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  
+  
+  <title>Phase III at aerospaceresearch.net</title>
+  <meta name="description" content="In this blog post, I will be summarising all the work done during phase III (i.e. last phase of GSoC 2019). This phase the major target was to wrap up all the work done during Phase I and Phase II. The first target was to implement GUI &amp;amp; CLI in matrices. The integration of GUI &amp;amp; CLI in matrices was pending from a long time and this was the time to get it done. The integration, however, was a bit tricky as it was very obvious that the usual parsers and tokenizers could not be used to integrate Matrices with GUI/CLI. We had to make an entirely new module which would be able to parse matrices (i.e. accept them as some input from the user and perform operations accordingly on them). We finally were able to properly integrate this module in GUI/CLI. It was worth the time &amp;amp; patience as the results were good. For now, the user has to enter the matrices in some specific Python list type pattern. In later versions, we can add options for adding matrices interactively by GUI. The next part was adding test cases for Statistics modules (which were implemented during Phase II). Also, we added Equation Plotting feature in CLI during this part. It involved creating another Qt window equivalent to the plotter used in GUI version. The last target of this phase was to add code to deal with cases when the Constant was raised to some fractional or Expression power. Earlier VisMa was able to handle only those cases when power was some Integer. The solution to this problem was to consider all the exponents as some object of Expression Class. Now since Expression simplification was done earlier this could be achieved. Also, I added the cases when Expression classes are involved in the Equation inputted by the user. Finally, our last target was to add the necessary documentation so that new users can get comfortable with the codebase. Personally, when I started to contribute to the project I found a lot of help because of docstrings &amp;amp; comments. Earlier developers (My mentors) have maintained a very well documented codebase, so it was my responsibility to carry this tradition forward. To sum up, all the work done I am updating a list of all that we achieved during GSoC. The Changelog is as follows: Simplify module written in Object-Oriented Programming Design. add, sub ,mul &amp;amp; truediv methods for most of the classes (like Constant, Expression, Trigonometric etc) have been added. Discrete Mathematics Module has been added: a. Combinatorics modules like Combinations, Permutations &amp;amp; Factorial modules (with GUI/CLI implementations) b. Statistics Module containing mean, median and mode c. Simple probability modules d. Bit-wise Boolean Algebra module Simultaneous Equation solver has been implemented The plotter is now able to plot in both 2D and 3D for equations having one, two or three variables. It has been implemented in the CLI version Equation solvers for higher degrees (Third &amp;amp; fourth degree) using determinant based approach have been added. Integrations and differentiation modules are now implemented in all Function Classes (Trigonometry, Exponential and Logarithmic) Integration &amp;amp; Differentiation modules have been rewritten to follow Object-Oriented Style. Product Rule for Differentiation &amp;amp; Integration by parts module has been added. Tokenize module is now improved to consider power operator (earlier it ignored power operator in many cases) With above improvement Expressions raised to some power are duly handled by VisMa. Parsing modules for printing matrices in Latex and string form have been added. With this matrix operations are now well implemented in GUI &amp;amp; CLI. Expression simplification is now completely supported by VisMa. Almost all cases of Expression classes being involved in input equation have been taken care of. Multiple brackets are now also taken care by VisMa (for this the modules using recursion have been implemented). The cases where Constant are raised to some fractional power or some solvable term have been covered. The points where we will be working now are: We can implement an Equation Scanner in the project. This way a user will be able to scan an image of the equation and it will be solved by VisMa. This was an idea during this GSoC but due to time constraints, we were not able to work in it for now. VisMa is not friendly with Trigonometric expressions, there is a need to deploy some code in simplification module for taking care of this thing. Overall, working in this community as a GSoC student was a great experience. It was hard but fun to stay within deadlines, fixing bugs, deploying new ideas etc. Feel free to connect with me on Twitter &amp;amp; GitHub.">
+  
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="/2019/08/25/Phase_3_GSoC/">
+  
+  
+  <link rel="alternate" type="application/rss+xml" title="Cofien&#39;s Blog" href="/feed.xml">
+
+  <link rel="icon" type="image/x-icon" href="/favicons/favicon.ico">
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+
+  
+  <meta property="og:title" content="Phase III at aerospaceresearch.net">
+  <meta property="og:site_name" content="Cofien&#39;s Blog">
+  <meta property="og:url" content="/2019/08/25/Phase_3_GSoC/">
+  <meta property="og:description" content="In this blog post, I will be summarising all the work done during phase III (i.e. last phase of GSoC 2019). This phase the major target was to wrap up all the work done during Phase I and Phase II. The first target was to implement GUI &amp;amp; CLI in matrices. The integration of GUI &amp;amp; CLI in matrices was pending from a long time and this was the time to get it done. The integration, however, was a bit tricky as it was very obvious that the usual parsers and tokenizers could not be used to integrate Matrices with GUI/CLI. We had to make an entirely new module which would be able to parse matrices (i.e. accept them as some input from the user and perform operations accordingly on them). We finally were able to properly integrate this module in GUI/CLI. It was worth the time &amp;amp; patience as the results were good. For now, the user has to enter the matrices in some specific Python list type pattern. In later versions, we can add options for adding matrices interactively by GUI. The next part was adding test cases for Statistics modules (which were implemented during Phase II). Also, we added Equation Plotting feature in CLI during this part. It involved creating another Qt window equivalent to the plotter used in GUI version. The last target of this phase was to add code to deal with cases when the Constant was raised to some fractional or Expression power. Earlier VisMa was able to handle only those cases when power was some Integer. The solution to this problem was to consider all the exponents as some object of Expression Class. Now since Expression simplification was done earlier this could be achieved. Also, I added the cases when Expression classes are involved in the Equation inputted by the user. Finally, our last target was to add the necessary documentation so that new users can get comfortable with the codebase. Personally, when I started to contribute to the project I found a lot of help because of docstrings &amp;amp; comments. Earlier developers (My mentors) have maintained a very well documented codebase, so it was my responsibility to carry this tradition forward. To sum up, all the work done I am updating a list of all that we achieved during GSoC. The Changelog is as follows: Simplify module written in Object-Oriented Programming Design. add, sub ,mul &amp;amp; truediv methods for most of the classes (like Constant, Expression, Trigonometric etc) have been added. Discrete Mathematics Module has been added: a. Combinatorics modules like Combinations, Permutations &amp;amp; Factorial modules (with GUI/CLI implementations) b. Statistics Module containing mean, median and mode c. Simple probability modules d. Bit-wise Boolean Algebra module Simultaneous Equation solver has been implemented The plotter is now able to plot in both 2D and 3D for equations having one, two or three variables. It has been implemented in the CLI version Equation solvers for higher degrees (Third &amp;amp; fourth degree) using determinant based approach have been added. Integrations and differentiation modules are now implemented in all Function Classes (Trigonometry, Exponential and Logarithmic) Integration &amp;amp; Differentiation modules have been rewritten to follow Object-Oriented Style. Product Rule for Differentiation &amp;amp; Integration by parts module has been added. Tokenize module is now improved to consider power operator (earlier it ignored power operator in many cases) With above improvement Expressions raised to some power are duly handled by VisMa. Parsing modules for printing matrices in Latex and string form have been added. With this matrix operations are now well implemented in GUI &amp;amp; CLI. Expression simplification is now completely supported by VisMa. Almost all cases of Expression classes being involved in input equation have been taken care of. Multiple brackets are now also taken care by VisMa (for this the modules using recursion have been implemented). The cases where Constant are raised to some fractional power or some solvable term have been covered. The points where we will be working now are: We can implement an Equation Scanner in the project. This way a user will be able to scan an image of the equation and it will be solved by VisMa. This was an idea during this GSoC but due to time constraints, we were not able to work in it for now. VisMa is not friendly with Trigonometric expressions, there is a need to deploy some code in simplification module for taking care of this thing. Overall, working in this community as a GSoC student was a great experience. It was hard but fun to stay within deadlines, fixing bugs, deploying new ideas etc. Feel free to connect with me on Twitter &amp;amp; GitHub.">
+  
+  
+  <meta name="twitter:card" content="summary">
+  
+  <meta name="twitter:title" content="Phase III at aerospaceresearch.net">
+  <meta name="twitter:description" content="In this blog post, I will be summarising all the work done during phase III (i.e. last phase of GSoC 2019). This phase the major target was to wrap up all the work done during Phase I and Phase II....">
+  
+  
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css?family=Bitter:400,400i,700" rel="stylesheet">
+
+  
+
+</head>
+
+
+  <body>
+
+    <header class="site-header">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="/">Cofien&#39;s Blog</a>
+
+    <nav class="site-nav">
+      
+        
+        <a class="page-link" href="/about/">About</a>
+      
+        
+        <a class="page-link" href="/blog/">Blog</a>
+      
+        
+        <a class="page-link" href="https://github.com/mayankdhiman/">GitHub</a>
+      
+    </nav>
+
+  </div>
+
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    
+      <h1 class="post-title" itemprop="name headline">Phase III at aerospaceresearch.net</h1>
+    
+    <p class="post-meta"><time datetime="2019-08-25T21:40:14+00:00" itemprop="datePublished">Aug 25, 2019</time> •
+  
+    
+    
+      
+    
+      
+        <a href="/categories/jekyll/">jekyll</a>,
+      
+    
+      
+    
+  
+    
+    
+      
+    
+      
+    
+      
+        <a href="/categories/update/">update</a>
+      
+    
+  
+
+
+ •
+  
+    
+    
+      
+        <a href="/tags/nothing/">nothing</a>
+      
+    
+      
+    
+      
+    
+  
+
+</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>In this blog post, I will be summarising all the work done during phase III (i.e. last phase of GSoC 2019).</p>
+
+<p>This phase the major target was to wrap up all the work done during Phase I and Phase II. The first target was to implement GUI &amp; CLI in matrices. The integration of GUI &amp; CLI in matrices was pending from a long time and this was the time to get it done. The integration, however, was a bit tricky as it was very obvious that the usual parsers and tokenizers could not be used to integrate Matrices with GUI/CLI. We had to make an entirely new module which would be able to parse matrices (i.e. accept them as some input from the user and perform operations accordingly on them). We finally were able to properly integrate this module in GUI/CLI. It was worth the time &amp; patience as the results were good. For now, the user has to enter the matrices in some specific Python list type pattern. In later versions, we can add options for adding matrices interactively by GUI.</p>
+
+<p>The next part was adding test cases for Statistics modules (which were implemented during Phase II). Also, we added Equation Plotting feature in CLI during this part. It involved creating another Qt window equivalent to the plotter used in GUI version.</p>
+
+<p>The last target of this phase was to add code to deal with cases when the Constant was raised to some fractional or Expression power. Earlier VisMa was able to handle only those cases when power was some Integer. The solution to this problem was to consider all the exponents as some object of Expression Class. Now since Expression simplification was done earlier this could be achieved. Also, I added the cases when Expression classes are involved in the Equation inputted by the user. Finally, our last target was to add the necessary documentation so that new users can get comfortable with the codebase. Personally, when I started to contribute to the project I found a lot of help because of docstrings &amp; comments. Earlier developers (My mentors) have maintained a very well documented codebase, so it was my responsibility to carry this tradition forward.</p>
+
+<p>To sum up, all the work done I am updating a list of all that we achieved during GSoC. The Changelog is as follows:</p>
+
+<ol>
+  <li>
+    <p>Simplify module written in Object-Oriented Programming Design.</p>
+  </li>
+  <li>
+    <p><strong>add</strong>, <strong>sub</strong> ,<strong>mul</strong> &amp; <strong>truediv</strong> methods for most of the classes (like Constant, Expression, Trigonometric etc) have been added.</p>
+  </li>
+  <li>
+    <p>Discrete Mathematics Module has been added:
+a. Combinatorics modules like Combinations, Permutations &amp; Factorial modules (with GUI/CLI implementations)
+b. Statistics Module containing mean, median and mode
+c. Simple probability modules
+d. Bit-wise Boolean Algebra module</p>
+  </li>
+  <li>
+    <p>Simultaneous Equation solver has been implemented</p>
+  </li>
+  <li>
+    <p>The plotter is now able to plot in both 2D and 3D for equations having one, two or three variables. It has been implemented in the CLI version</p>
+  </li>
+  <li>
+    <p>Equation solvers for higher degrees (Third &amp; fourth degree) using determinant based approach have been added.</p>
+  </li>
+  <li>
+    <p>Integrations and differentiation modules are now implemented in all Function Classes (Trigonometry, Exponential and Logarithmic)</p>
+  </li>
+  <li>
+    <p>Integration &amp; Differentiation modules have been rewritten to follow Object-Oriented Style.</p>
+  </li>
+  <li>
+    <p>Product Rule for Differentiation &amp; Integration by parts module has been added.</p>
+  </li>
+  <li>
+    <p>Tokenize module is now improved to consider power operator (earlier it ignored power operator in many cases)</p>
+  </li>
+  <li>
+    <p>With above improvement Expressions raised to some power are duly handled by VisMa.</p>
+  </li>
+  <li>
+    <p>Parsing modules for printing matrices in Latex and string form have been added. With this matrix operations are now well implemented in GUI &amp; CLI.</p>
+  </li>
+  <li>
+    <p>Expression simplification is now completely supported by VisMa. Almost all cases of Expression classes being involved in input equation have been taken care of. Multiple brackets are now also taken care by VisMa (for this the modules using recursion have been implemented).</p>
+  </li>
+  <li>
+    <p>The cases where Constant are raised to some fractional power or some solvable term have been covered.</p>
+  </li>
+</ol>
+
+<p>The points where we will be working now are:</p>
+
+<ol>
+  <li>
+    <p>We can implement an Equation Scanner in the project. This way a user will be able to scan an image of the equation and it will be solved by VisMa. This was an idea during this GSoC but due to time constraints, we were not able to work in it for now.</p>
+  </li>
+  <li>
+    <p>VisMa is not friendly with Trigonometric expressions, there is a need to deploy some code in simplification module for taking care of this thing.</p>
+  </li>
+</ol>
+
+<p>Overall, working in this community as a GSoC student was a great experience. It was hard but fun to stay within deadlines, fixing bugs, deploying new ideas etc. Feel free to connect with me on <a href="https://twitter.com/mayank1Dhiman">Twitter</a> &amp; <a href="https://github.com/mayankDhiman">GitHub</a>.</p>
+
+
+  </div>
+
+  
+    <div class="post-comments" itemprop="comment">
+      <hr />
+<h1>Comments</h1>
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://https-mayankdhiman-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+    </div>
+  
+
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <p>
+      
+
+&copy; mayankDhiman - Powered by <a href="https://jekyllrb.com">Jekyll</a> &amp; <a href="https://github.com/yous/whiteglass">whiteglass</a> - Subscribe via <a href="/feed.xml">RSS</a>
+
+    </p>
+
+  </div>
+
+</footer>
+
+    <script id="dsq-count-scr" src="//https-mayankdhiman-github-io.disqus.com/count.js" async></script>
+  </body>
+
+</html>
